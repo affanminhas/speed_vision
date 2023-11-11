@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "947378076063",
+    "project_id": "speed-vision-95eaa",
+    "storage_bucket": "speed-vision-95eaa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947378076063:android:b3ce56c86fd13513fa25aa",
+        "android_client_info": {
+          "package_name": "com.speed.vision.app.speed_vision"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcQjBUEomfhvXRFNGPp1PfJkiY9rj75zc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
