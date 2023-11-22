@@ -5,6 +5,7 @@ import 'package:speed_vision/views/splash/splash_view.dart';
 
 import 'views/auth/reset_password/email_sent_view.dart';
 import 'views/auth/reset_password/reset_password_view.dart';
+import 'views/dashboard/dashboard_view.dart';
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -19,6 +20,8 @@ class Routes {
         return MaterialPageRoute(builder: (_) => const ResetPasswordView());
       case EmailSentView.id:
         return MaterialPageRoute(builder: (_) => const EmailSentView());
+      case DashboardView.id:
+        return MaterialPageRoute(builder: (_) => const DashboardView());
       default:
         return MaterialPageRoute(
           builder: (_) {
