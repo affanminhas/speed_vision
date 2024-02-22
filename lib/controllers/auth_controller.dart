@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:speed_vision/api/auth_api.dart';
+import 'package:speed_vision/views/dashboard/dashboard_view.dart';
 
 class AuthController extends GetxController {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -39,7 +40,17 @@ class AuthController extends GetxController {
       if (loginUser != null) {
         log("Login success");
         user = loginUser;
+        Get.toNamed(DashboardView.id);
       } else {
+        Get.showSnackbar(
+
+          const GetSnackBar(
+            title: "Error",
+            message: "Login failed",
+            snackPosition: SnackPosition.TOP,
+            duration: Duration(seconds: 2)
+          ),
+        );
         log("Login failed");
       }
     } catch (e) {

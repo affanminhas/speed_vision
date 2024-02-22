@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:speed_vision/constant/color_palete.dart';
 import 'package:speed_vision/views/explore/explore_view.dart';
 import 'package:speed_vision/views/home/home_view.dart';
+import 'package:speed_vision/views/notification/notification_view.dart';
 import 'package:speed_vision/views/profile/profile_view.dart';
 
 class DashboardView extends StatefulWidget {
@@ -18,6 +19,7 @@ class _DashboardViewState extends State<DashboardView> {
   var screens = [
     const HomeView(),
     const ExploreView(),
+    const NotificationView(),
     const ProfileView(),
   ];
 
@@ -74,9 +76,19 @@ class _DashboardViewState extends State<DashboardView> {
                         currentIndex = 2;
                       }),
                       child: Icon(
-                        Icons.person,
+                        Icons.notifications,
                         size: 30,
                         color: currentIndex == 2 ? ColorPalette.primaryColor : ColorPalette.greyShade400,
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () => setState(() {
+                        currentIndex = 3;
+                      }),
+                      child: Icon(
+                        Icons.person,
+                        size: 30,
+                        color: currentIndex == 3 ? ColorPalette.primaryColor : ColorPalette.greyShade400,
                       ),
                     ),
                   ],

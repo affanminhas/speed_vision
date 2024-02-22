@@ -4,7 +4,7 @@ class ColorPalette {
   ColorPalette._();
 
   /// --- App Colors ---
-  static Color primaryColor = const Color(0xffCC8FED);
+  static Color primaryColor = const Color(0xff191D20);
   static Color blackColor = const Color(0xff000000);
   static Color greyText1 = const Color(0xffADA4A5);
   static Color lightBlack = const Color(0xff232323);
@@ -16,7 +16,7 @@ class ColorPalette {
   static Color greenCardColor = const Color(0xff83E499);
   static Color scaffoldBackgroundColor = const Color(0xffffffff);
   static Color allOrderColor = const Color(0xffc0c9b6);
-  static Color redColor = const Color(0xfffa3e38);
+  static Color redColor = const Color(0xffFD5656);
 
   /// ------- Grey Shades -------
   static Color? greyShade100 = Colors.grey.shade100;

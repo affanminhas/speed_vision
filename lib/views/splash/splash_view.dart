@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
-import 'package:speed_vision/constant/app_images.dart';
-import 'package:speed_vision/constant/typography.dart';
+import 'package:speed_vision/constant/color_palete.dart';
+import 'package:speed_vision/constant/strings.dart';
 import 'package:speed_vision/views/auth/login/login_view.dart';
 
 class SplashView extends StatefulWidget {
@@ -29,18 +28,15 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: WillPopScope(
-        onWillPop: () async => false,
+      backgroundColor: ColorPalette.primaryColor,
+      body: PopScope(
+        canPop: false,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-              child: Lottie.asset(Images.logo, height: 250),
+              child: Image.asset(Strings.mainLogo),
             ),
-            Text(
-              'Speed Vision',
-              style: poppinsRegular.copyWith(fontSize: 20),
-            )
           ],
         ),
       ),

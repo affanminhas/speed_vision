@@ -15,6 +15,7 @@ class ResetPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorPalette.primaryColor,
       appBar: CustomAppBar(context: context),
       body: SafeArea(
         child: Padding(
@@ -22,7 +23,7 @@ class ResetPasswordView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Reset Password', style: poppinsBold.copyWith(fontSize: 20)),
+              Text('Reset Password', style: poppinsBold.copyWith(fontSize: 20, color: Colors.white)),
               const VerticalSpacing(10),
               Text(
                 "Enter the email associated with your account and we'll send an email with instruction to reset password",
@@ -35,6 +36,7 @@ class ResetPasswordView extends StatelessWidget {
               ),
               const VerticalSpacing(20),
               CustomElevatedButton(
+                textStyle: poppinsRegular.copyWith(fontSize: 16, color: Colors.white),
                 onPressed: () {
                   Navigator.pushNamed(context, EmailSentView.id);
                 },

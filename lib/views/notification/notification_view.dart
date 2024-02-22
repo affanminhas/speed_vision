@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:speed_vision/constant/color_palete.dart';
 import 'package:speed_vision/constant/typography.dart';
 
-class ProfileView extends StatelessWidget {
-  const ProfileView({super.key});
+class NotificationView extends StatelessWidget {
+  const NotificationView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class ProfileView extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Text(
-            'Profile View',
+            'Notification View',
             style: poppinsRegular.copyWith(fontSize: 20, color: Colors.white),
           ),
         ),

@@ -20,6 +20,7 @@ class _EmailSentViewState extends State<EmailSentView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorPalette.primaryColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -30,7 +31,7 @@ class _EmailSentViewState extends State<EmailSentView> {
                 onTap: ()=> Navigator.pop(context),
                 child: const Align(
                   alignment: Alignment.centerLeft,
-                  child: Icon(Icons.close),
+                  child: Icon(Icons.close, color: Colors.white),
                 ),
               ),
               Expanded(
@@ -41,17 +42,18 @@ class _EmailSentViewState extends State<EmailSentView> {
                     Container(
                       padding: const EdgeInsets.all(15),
                       decoration: BoxDecoration(
-                        color: ColorPalette.primaryColor.withOpacity(0.2),
+                        color: ColorPalette.whiteColor.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Image.asset(
                         Images.email,
                         width: 60,
                         height: 60,
+                        color: Colors.white,
                       ),
                     ),
                     const VerticalSpacing(30),
-                    Text('Check your mail', style: poppinsBold.copyWith(fontSize: 20)),
+                    Text('Check your mail', style: poppinsBold.copyWith(fontSize: 20, color: Colors.white)),
                     const VerticalSpacing(5),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -64,6 +66,7 @@ class _EmailSentViewState extends State<EmailSentView> {
                     const VerticalSpacing(40),
                     CustomElevatedButton(
                       width: 200,
+                      textStyle: poppinsRegular.copyWith(fontSize: 14, color: Colors.white),
                       onPressed: () async {
                         var result = await OpenMailApp.openMailApp();
 

@@ -8,7 +8,6 @@ import 'package:speed_vision/mixins/validation_mixin.dart';
 import 'package:speed_vision/shared/custom_buttons.dart';
 import 'package:speed_vision/shared/custom_text_field.dart';
 import 'package:speed_vision/views/auth/reset_password/reset_password_view.dart';
-import 'package:speed_vision/views/dashboard/dashboard_view.dart';
 
 class LoginView extends StatefulWidget {
   static const String id = '/login-view';
@@ -37,6 +36,8 @@ class _LoginViewState extends State<LoginView> with ValidationMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorPalette.primaryColor,
+      resizeToAvoidBottomInset: false,
       body: GetBuilder<AuthController>(
         builder: (authController) {
           return SafeArea(
@@ -49,9 +50,9 @@ class _LoginViewState extends State<LoginView> with ValidationMixin {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const VerticalSpacing(20),
-                      Text('Hey admin,', style: poppinsRegular.copyWith(fontSize: 16)),
+                      Text('Hey admin,', style: poppinsRegular.copyWith(fontSize: 16, color: Colors.white)),
                       const VerticalSpacing(5),
-                      Text('Welcome Back', style: poppinsBold.copyWith(fontSize: 20)),
+                      Text('Welcome Back', style: poppinsBold.copyWith(fontSize: 20, color: Colors.white)),
                       const VerticalSpacing(30),
                       CustomTextField(
                         hintText: 'Email',
@@ -90,6 +91,8 @@ class _LoginViewState extends State<LoginView> with ValidationMixin {
                       authController.loading
                           ? const Center(child: CircularProgressIndicator())
                           : CustomElevatedButton(
+                              backgroundColor: ColorPalette.redColor,
+                              textStyle: poppinsMedium.copyWith(fontSize: 16, color: Colors.white),
                               onPressed: () {
                                 if (_formKey.currentState?.validate() ?? false) {
                                   _authController.login(_emailController.text, _passwordController.text);

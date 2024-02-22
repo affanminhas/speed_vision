@@ -6,6 +6,7 @@ import 'package:speed_vision/views/splash/splash_view.dart';
 import 'views/auth/reset_password/email_sent_view.dart';
 import 'views/auth/reset_password/reset_password_view.dart';
 import 'views/dashboard/dashboard_view.dart';
+import 'package:page_transition/page_transition.dart';
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -13,15 +14,15 @@ class Routes {
       case AppView.id:
         return MaterialPageRoute(builder: (_) => const AppView(), settings: const RouteSettings(name: 'AppView'));
       case SplashView.id:
-        return MaterialPageRoute(builder: (_) => const SplashView());
+        return PageTransition(child: const SplashView(), type: PageTransitionType.rightToLeft);
       case LoginView.id:
-        return MaterialPageRoute(builder: (_) => const LoginView());
+        return PageTransition(child: const LoginView(), type: PageTransitionType.rightToLeft);
       case ResetPasswordView.id:
-        return MaterialPageRoute(builder: (_) => const ResetPasswordView());
+        return PageTransition(child: const ResetPasswordView(), type: PageTransitionType.rightToLeft);
       case EmailSentView.id:
-        return MaterialPageRoute(builder: (_) => const EmailSentView());
+        return PageTransition(child: const EmailSentView(), type: PageTransitionType.rightToLeft);
       case DashboardView.id:
-        return MaterialPageRoute(builder: (_) => const DashboardView());
+        return PageTransition(child: const DashboardView(), type: PageTransitionType.rightToLeft);
       default:
         return MaterialPageRoute(
           builder: (_) {

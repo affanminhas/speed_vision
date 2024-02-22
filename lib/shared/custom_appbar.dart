@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:speed_vision/constant/color_palete.dart';
 import 'package:speed_vision/constant/typography.dart';
 
 class CustomAppBar extends AppBar {
@@ -17,13 +18,14 @@ class CustomAppBar extends AppBar {
     final Widget? leading,
     double? fontSize = 18,
   }) : super(
-          systemOverlayStyle: const SystemUiOverlayStyle(
-            statusBarColor: Colors.white,
-            statusBarIconBrightness: Brightness.dark,
+          systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: ColorPalette.primaryColor,
+            statusBarIconBrightness: Brightness.light,
           ),
           title: Text(
             title ?? '',
-            style: titleStyle ?? interRegular.copyWith(fontSize: fontSize, color: Theme.of(context).textTheme.bodyText1?.color),
+            style: titleStyle ??
+                interRegular.copyWith(fontSize: fontSize, color: Theme.of(context).textTheme.bodyText1?.color),
           ),
           centerTitle: true,
           leading: isBackButtonExist!
@@ -43,7 +45,7 @@ class CustomAppBar extends AppBar {
                   ),
                 )
               : leading,
-          backgroundColor: isBackgroundColor ? Theme.of(context).cardColor : const Color(0xffFAFAFA),
+          backgroundColor: ColorPalette.primaryColor,
           elevation: 0,
         );
 
